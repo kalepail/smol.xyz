@@ -1,0 +1,47 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "prepare": "svelte-kit sync",
+    "dev": "wrangler dev --local",
+    "mf": "miniflare worker-site/worker.mjs --site .svelte-kit/assets --live-reload --watch --debug --modules --mount smol-xyz-do=../smol.xyz-wrangler --kv-persist --do-persist --do DO_USERS=Users@smol-xyz-do --do LIVE_GLYPH=LiveGlyph@smol-xyz-do --env .env.local",
+    "deploy": "wrangler publish"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.17.12",
+    "@babel/preset-env": "^7.17.12",
+    "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "@lunapaint/png-codec": "^0.2.0",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@sveltejs/adapter-cloudflare-workers": "^1.0.0-next.40",
+    "@sveltejs/kit": "next",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "autoprefixer": "^10.4.7",
+    "babel-plugin-lodash": "^3.3.4",
+    "bignumber.js": "^9.0.2",
+    "buffer": "^6.0.3",
+    "lodash-es": "^4.17.21",
+    "postcss": "^8.4.13",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-polyfill-node": "^0.9.0",
+    "stellar-sdk": "^10.1.0",
+    "svelte": "^3.48.0",
+    "svelte-preprocess": "^4.10.6",
+    "tailwind-children": "^0.3.5",
+    "tailwindcss": "^3.0.24",
+    "tailwindcss-image-rendering": "^1.0.2",
+    "util": "^0.12.4"
+  },
+  "dependencies": {
+    "@borderless/parse-authorization": "^1.0.0",
+    "@tsndr/cloudflare-worker-jwt": "^1.1.7"
+  }
+}

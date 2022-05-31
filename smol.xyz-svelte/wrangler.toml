@@ -1,0 +1,27 @@
+name = "smol-xyz-svelte"
+type = "javascript"
+main = "worker-site/worker.mjs"
+usage_model = "bundled"
+compatibility_flags = []
+workers_dev = false
+compatibility_date = "2022-05-19"
+
+kv_namespaces = [
+  { binding = "KV_USERS", id = "0442af5c9f6f4ef7b925242fcb4f1d53" },
+  { binding = "GLYPHS", id = "238c0b3a075c4b548cfafcbf5ad0432b" }
+]
+
+[durable_objects]
+bindings = [
+  { name = "DO_USERS", class_name = "Users", script_name = "smol-xyz-do" },
+  { name = "LIVE_GLYPH", class_name = "LiveGlyph", script_name = "smol-xyz-do" }
+]
+
+[build]
+command = "npm run build"
+
+[build.upload]
+format = "modules"
+
+[site]
+bucket = ".svelte-kit/assets"
