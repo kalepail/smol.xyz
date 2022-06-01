@@ -37,19 +37,19 @@ function logOut() {
     <h1 class="text-xl font-bold hover:underline">smol.xyz</h1>
   </a>
 
-  <div class="flex items-center ml-auto child:ml-2 hover:child:underline">
-    <a class="child text-white bg-red-500 rounded px-2 py-1 uppercase text-sm" href="/live">Live</a>
+  <div class="flex items-center ml-auto">
+    <a class="ml-2 hover:underline text-white bg-red-500 rounded px-2 py-1 uppercase text-sm" href="/live">Live</a>
 
-    <a class="child" href="/create">Create</a>
+    <a class="ml-2 hover:underline" href="/create">Create</a>
 
     {#if $tokenPayload}
-      <a class="child" href="/profiles/{$tokenPayload.sub}">Profile {$user?.loms ? `(${$user?.loms} Ł)` : ''}</a>
+      <a class="ml-2 hover:underline" href="/profiles/{$tokenPayload.sub}">Profile {$user?.loms ? `(${$user?.loms} Ł)` : ''}</a>
     {/if}
 
     {#if $token}
-      <button class="pointer child" on:click="{logOut}">Log out</button>
+      <button class="pointer hover:underline ml-2" on:click="{logOut}">Log out</button>
     {:else}
-      <a class="child" href="{oauthUrl}">Log in</a>
+      <a class="ml-2 hover:underline" href="{oauthUrl}">Log in</a>
     {/if}
   </div>
 </header>

@@ -147,10 +147,10 @@ function mint() {
       </ul>
     </div>
 
-    <div class="flex flex-col child:mb-2 ml-4">
-      <HexGlyph class="child" palette={$palette} width={$width} px={128} />
-      <HexGlyph class="child" palette={$palette} width={$width} px={64} />
-      <HexGlyph class="child" palette={$palette} width={$width} px={32} />
+    <div class="flex flex-col ml-4">
+      <HexGlyph class="mb-2" palette={$palette} width={$width} px={128} />
+      <HexGlyph class="mb-2" palette={$palette} width={$width} px={64} />
+      <HexGlyph class="mb-2" palette={$palette} width={$width} px={32} />
     </div>
   </div>
 
@@ -164,8 +164,8 @@ function mint() {
     <textarea class="border-2 border-gray active:border-blue-500 rounded px-2 py-1" style:min-height="5.25rem" rows="3" bind:value={$description}></textarea>
   </label>
 
-  <div class="mt-2 flex child:mr-2">
-    <button on:click={erase} class="child bg-black text-white py-1 px-2 rounded">Erase</button>
-    <button on:click={mint} class="child bg-black text-white py-1 px-2 rounded">Save</button>
+  <div class="mt-2 flex">
+    <button on:click={erase} class="mr-2 bg-black text-white py-1 px-2 rounded">Erase</button>
+    <button on:click={mint} class="mr-2 bg-black text-white py-1 px-2 rounded">Save</button>
   </div>
 </div>

@@ -4,7 +4,6 @@ module.exports = {
     extend: {}
   },
   plugins: [
-    require('tailwind-children'),
     require('@tailwindcss/aspect-ratio'),
     require('tailwindcss-image-rendering')()
   ],

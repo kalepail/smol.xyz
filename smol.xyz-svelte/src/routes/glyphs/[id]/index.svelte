@@ -60,11 +60,11 @@ function collect() {
 </ul>
 
 {#if metadata.author !== $tokenPayload?.sub}
-<div class="mt-2 flex child:mr-2">
+<div class="mt-2 flex">
   {#if collected}
     <p class="text-green-500">Collected</p>
   {:else}
-    <button on:click={collect} class="child bg-black text-white py-1 px-2 rounded">Collect</button>
+    <button on:click={collect} class="mr-2 bg-black text-white py-1 px-2 rounded">Collect</button>
   {/if}
 </div>
 {/if}

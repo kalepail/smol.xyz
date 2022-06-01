@@ -1,6 +1,6 @@
 <script>
 import { writable } from 'svelte/store'
-import { onDestroy, onMount, tick } from 'svelte'
+import { onDestroy, onMount } from 'svelte'
 
 import { token } from '../../@store/user'
 import { handleResponse } from '../../@js/utils';
@@ -44,6 +44,9 @@ function colorPixel(e, i) {
     e.buttons === 1
     || e.type === 'mousedown'
   ) {
+    if (!$token)
+      return alert('Please log in first')
+
     const ogc = String($palette[i])
 
     palette.update((p) => {

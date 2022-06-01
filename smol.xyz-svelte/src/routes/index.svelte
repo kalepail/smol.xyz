@@ -59,8 +59,8 @@ function reset() {
 }
 </script>
 
-<div class="flex mb-2 child:mr-2 child:flex child:items-center">
-  <label class="child">
+<div class="flex mb-2 ">
+  <label class="mr-2 flex items-center">
     <span class="mr-2">Width</span>
     <select class="w-24 h-8 border-2 border-gray active:border-blue-500 rounded px-2" bind:value={$width}>
       <option value="any">Any</option>
@@ -71,7 +71,7 @@ function reset() {
     </select>
   </label>
 
-  <label class="child">
+  <label class="mr-2 flex items-center">
     <span class="mr-2">Height</span>
     <select class="w-24 h-8 border-2 border-gray active:border-blue-500 rounded px-2" bind:value={$height} disabled={$width === 'any'}>
       <option value="any">Any</option>
@@ -83,7 +83,7 @@ function reset() {
   </label>
 
   {#if $width !== 'any' || $height !== 'any'}
-    <button class="bg-black text-white py-1 px-2 rounded child" on:click={reset}>Reset</button>
+    <button class="bg-black text-white py-1 px-2 rounded mr-2 flex items-center" on:click={reset}>Reset</button>
   {/if}
 </div>
 
