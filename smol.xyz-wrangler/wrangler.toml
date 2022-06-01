@@ -3,12 +3,17 @@ type = "javascript"
 compatibility_date = "2022-05-18"
 usage_model = "bundled"
 workers_dev = false
+# workers_dev = true
 
 [durable_objects]
 bindings = [
   { name = "USERS", class_name = "Users" },
   { name = "LIVE_GLYPH", class_name = "LiveGlyph" }
 ]
+
+# [[r2_buckets]]
+# binding = 'TEST'
+# bucket_name = 'test'
 
 [build]
 command = "npm run build"
