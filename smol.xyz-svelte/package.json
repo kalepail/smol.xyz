@@ -37,10 +37,8 @@
     "svelte-preprocess": "^4.10.6",
     "tailwindcss": "^3.0.24",
     "tailwindcss-image-rendering": "^1.0.2",
-    "util": "^0.12.4"
-  },
-  "dependencies": {
+    "util": "^0.12.4",
     "@borderless/parse-authorization": "^1.0.0",
-    "@tsndr/cloudflare-worker-jwt": "^1.1.7"
+    "@tsndr/cloudflare-worker-jwt": "^1.2.0"
   }
 }
