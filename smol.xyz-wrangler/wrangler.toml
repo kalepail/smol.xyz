@@ -16,7 +16,7 @@ bindings = [
 # bucket_name = 'test'
 
 [build]
-command = "npm run build"
+command = "pnpm build"
 
 [build.upload]
 dir = "dist"
